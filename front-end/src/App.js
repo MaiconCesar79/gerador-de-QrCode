@@ -1,20 +1,20 @@
-
+import React, { useState } from 'react';
+import {Input, Row, Col} from 'reactstrap';
+import './App.css';
 
 function App() {
+
+  const[text, setText] = useState("");
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Row>
+        <Col className="bg-light border">
+          <Input className='link' onChange={(element) => {setText(element.target.value)}} value={text} 
+          />
+        </Col>
+      </Row>
+      
       </header>
     </div>
   );
